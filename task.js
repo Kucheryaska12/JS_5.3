@@ -1,4 +1,4 @@
-let xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 const form = document.getElementById('form');
 const progress = document.getElementById( 'progress' );
 
@@ -15,7 +15,7 @@ xhr.upload.addEventListener('progress', (e)=>{
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    let formData = new FormData(form);
+    const formData = new FormData(form);
     xhr.open('POST', 'https://students.netoservices.ru/nestjs-backend/upload');
     xhr.send(formData);
 })
